@@ -12,69 +12,86 @@ import {
   ImageBackground,
   StatusBar,
   TouchableOpacity,
-  Text
+  Text,
+  TextInput,
+  ScrollView,
+  Image
 } from 'react-native';
+
+// import { TextInput } from 'react-native-paper';
 
 import { 
   Dimensions 
 } from 'react-native';
 
-import { styles } from '../asset/css/basestyle';
+import { styles, custom } from '../asset/css/basestyle';
 
 import GABAY from '../resource/svg/GABAY.svg'
 import SubText from '../resource/svg/yourguideagainstdepressionandanxiety.svg'
 
-import MHPHLogoIconColored from '../resource/svg/MHPHLogoIconColored.svg'
+import Rectangle68 from '../resource/svg/Rectangle68.svg'
+import GABAY_small from '../resource/svg/GABAY_small.svg'
+import Imreadyandwilling from '../resource/svg/Imreadyandwilling.svg'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
 
-const App = () => {
+const Register = () => {
   return (
-    <View> 
+    <ScrollView> 
       <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
-      <ImageBackground style = {[{height:windowHeight}]} source={require('../resource/png/Rectangle13534.png')} resizeMode="cover"> 
-        <View style={[styles.flex2]}>
-          <View style={[styles.justifyCenter, styles.alignCenter, styles.flex1]}>
-            <View style={[styles.bgLight, styles.justifyCenter, styles.alignCenter, {borderRadius:65, width:180, height:180}]}>
-              <MHPHLogoIconColored />
+        <ImageBackground style = {[{height:windowHeight}]} source={require('../resource/jpg/banig2.jpg')} resizeMode="cover"> 
+            <View style={[{marginLeft:18}]}>
+                <View style={[styles.flexRow, styles.alignCenter, {marginTop:20}]}>
+                    <Image
+                        source={require('../resource/png/MHPHLogoWhite1.png')}
+                        resizeMode={'contain'}
+                        style={[{marginRight:10 }]}
+                    />
+                    <GABAY_small/>
+                </View>
+                <View style={[{marginTop:15}]}>
+                    <Imreadyandwilling />
+                </View>
             </View>
-          </View>
-          <View style={[styles.flex1]}>
-            <View style={[styles.flexCol, styles.justifyCenter, styles.alignCenter]}>
-              <View style={[{marginBottom:20}]}>
-                <GABAY/>
-              </View>
-              <View>
-                <SubText/>
-              </View>
-            </View>
-            <View style={[styles.justifyCenter, styles.alignCenter, styles.flex1]}>
-              <View>
-                <TouchableOpacity>
-                    <View style={[{backgroundColor:'#FFFFFF', height:55, width:250, borderRadius:15, justifyContent:'center'}]}>
-                      <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:22, fontSize:18, fontWeight:"700", color:'#16A9CF', textAlign:'center'}]}>I'm ready</Text>
+            <View style={[{backgroundColor:'#F8F8F8', height:windowHeight, borderTopStartRadius:30, borderTopEndRadius:30, marginTop:20}]}>
+                <View style={[{paddingVertical:16, paddingHorizontal:17}]}>
+                    <View style={[styles.mB1]}>
+                        <TextInput
+                            style={[{
+                                paddingHorizontal:16,
+                                width:328,
+                                height:55,
+                                color:'rgba(0, 0, 0, 0.6)',
+                                borderRadius:15,
+                                borderTopEndRadius:15,
+                                borderTopStartRadius:15,
+                                backgroundColor:'#FFFFFF',
+                                shadowOpacity: 0.5,
+                                shadowRadius: 3,
+                                fontStyle:'normal', 
+                                textfontFamily:'Quicksand-Bold',
+                                shadowOffset: {
+                                    height: 0,
+                                    width: 0,
+                                },
+                                elevation: 2
+                            }]}
+                            // onChangeText={onChangeNumber}
+                            // value={number}
+                            outlineColor="red"
+                            placeholder="First Name"
+                            placeholderTextColor={'rgba(0, 0, 0, 0.6)'}
+                            keyboardType="text"
+                        />
                     </View>
-                </TouchableOpacity>
-              </View>
-              <View style={[styles.flexRow, styles.mT1]}>
-                <View style={[{width:126}]}>
-                  <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:18, fontSize:14, fontWeight:"500", color:'#FFFFFF'}]}>Already signed up?</Text>
                 </View>
-                <View>
-                  <TouchableOpacity>
-                    <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:20, fontSize:16, fontWeight:"700", color:'#FFFFFF'}]}>Continue thriving.</Text>
-                  </TouchableOpacity>
-                </View>
-              </View>
             </View>
-          </View>
-        </View>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+    </ScrollView>
   );
 };
 
-export default App;
+export default Register;

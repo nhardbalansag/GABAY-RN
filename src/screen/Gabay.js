@@ -31,10 +31,10 @@ const windowHeight = Dimensions.get('window').height;
 const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
 
-const App = () => {
+const Gabay = () => {
   return (
     <View style={[]}> 
-      <StatusBar hidden backgroundColor="transparent"/>
+      <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
       <ImageBackground style = {[{height:windowHeight}]} source={require('../resource/png/Rectangle13534.png')} resizeMode="cover"> 
         <View style={[styles.flex2]}>
           <View style={[styles.justifyCenter, styles.alignCenter, styles.flex1]}>
@@ -77,4 +77,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Gabay;
