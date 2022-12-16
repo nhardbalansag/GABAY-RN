@@ -41,7 +41,7 @@ const ForgotPassword = () => {
             <View style={[ {backgroundColor:'#FFFFFF', paddingHorizontal:17, height:'100%'}]}>
                 <View style={[ styles.alignFlexStart, {marginTop:68}]}>
                     <View style={[{marginBottom:10}]}>
-                        <ForgottenPassword/>
+                        <ForgottenPassword />
                     </View>
                     <View>
                         <ForgotPasswordSub/>
