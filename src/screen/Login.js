@@ -34,14 +34,15 @@ import GABAYBlue from '../resource/svg/GABAYBlue.svg'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const window = Dimensions.get("window");
-const screen = Dimensions.get("screen");
+const screen = Dimensions.get("screen").height;
+const screenwidth = Dimensions.get("screen").width;
 
 const Login = () => {
   return (
-    <ScrollView> 
-      <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
-        <ImageBackground style = {[{height:windowHeight}]} source={require('../resource/png/Rectangle13534.png')} resizeMode="cover"> 
-            <View style={[styles.flex2, {backgroundColor:'#FFFFFF'}]}>
+    <View>
+        <ScrollView> 
+            <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
+            <View style={[ {backgroundColor:'#FFFFFF', height:screen}]}>
                 <View style={[styles.justifyCenter, styles.alignCenter, {marginTop:68}]}>
                     <View>
                         <Rectangle68 />
@@ -50,15 +51,15 @@ const Login = () => {
                         <GABAYBlue />
                     </View>
                 </View>
-                <View style={[{marginTop:75}]}>
-                    <View style={[styles.flexCol, styles.justifyCenter, styles.alignCenter]}>
+                <View style={[{marginTop:75, marginHorizontal:16}]}>
+                    <View style={[styles.justifyCenter, styles.alignCenter]}>
                     {/* login form input */}
                         <View>
                             <View style={[styles.mB1]}>
                                 <TextInput
                                     style={[{
                                         paddingHorizontal:16,
-                                        width:328,
+                                        width:(screenwidth - 32),
                                         height:55,
                                         color:'rgba(0, 0, 0, 0.6)',
                                         borderRadius:15,
@@ -87,7 +88,7 @@ const Login = () => {
                                 <TextInput
                                     style={[{
                                         paddingHorizontal:16,
-                                        width:328,
+                                        width:(screenwidth - 32),
                                         height:55,
                                         color:'rgba(0, 0, 0, 0.6)',
                                         borderRadius:15,
@@ -118,7 +119,7 @@ const Login = () => {
                         <View style={[styles.justifyCenter, styles.alignCenter]}>
                             <View>
                                 <TouchableOpacity>
-                                    <View style={[{backgroundColor:'#16A9CF', height:55, width:328, borderRadius:15, justifyContent:'center'}]}>
+                                    <View style={[{backgroundColor:'#16A9CF', height:55, width:(screenwidth - 32), borderRadius:15, justifyContent:'center'}]}>
                                         <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:22, fontSize:18, fontWeight:"700", color:'#FFFFFF', textAlign:'center'}]}>Let's go</Text>
                                     </View>
                                 </TouchableOpacity>
@@ -144,8 +145,9 @@ const Login = () => {
                     </View>
                 </View>
             </View>
-        </ImageBackground>
-    </ScrollView>
+        </ScrollView>
+    </View>
+    
   );
 };
 

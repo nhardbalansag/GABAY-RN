@@ -17,7 +17,6 @@ import {
   ScrollView,
   Image,
   Modal,
-  TouchableWithoutFeedback,
   FlatList,
 } from 'react-native';
 
@@ -26,6 +25,8 @@ import {
 } from 'react-native';
 
 import DropDownPicker from 'react-native-dropdown-picker';
+
+import CheckBox from '@react-native-community/checkbox';
 
 import { styles, custom } from '../asset/css/basestyle';
 
@@ -51,7 +52,7 @@ const Register = () => {
     const HeaderComponent = () =>{
         return(
             <View style={[{marginLeft:18}]}>
-                <View style={[styles.flexRow, styles.alignCenter, {marginTop:20}]}>
+                <View style={[styles.flexRow, styles.alignCenter, {marginTop:40}]}>
                     <Image
                         source={require('../resource/png/MHPHLogoWhite1.png')}
                         resizeMode={'contain'}
@@ -308,17 +309,58 @@ const Register = () => {
                         setItems={setItems}
                     />
                 </View>
-                <View style={[styles.bordered, {marginVertical:500}]}>
-                    {/* <CheckBox
-                        style={{flex: 1, padding: 10}}
-                        onClick={()=>{
-                        this.setState({
-                            isChecked:!this.state.isChecked
-                        })
-                        }}
-                        isChecked={this.state.isChecked}
-                        leftText={"CheckBox"}
-                    /> */}
+                <View style={[styles.flexRow, styles.alignCenter, {marginTop:20}]}>
+                    <View style={[{marginRight:10}]}>
+                        <CheckBox
+                            lineWidth={1}
+                            disabled={false}
+                            value={true}
+                            //    onValueChange={(newValue) => setToggleCheckBox(newValue)}
+                        />
+                    </View>
+                    <View>
+                        <View style={[styles.flexRow, styles.alignCenter]}>
+                            <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:15, fontSize:14, fontWeight:"600", color:'rgba(0, 0, 0, 0.6)'}]}>
+                                I agree to the 
+                            </Text>
+                            <TouchableOpacity>
+                                <Text style={[{marginHorizontal: 5,fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:15, fontSize:14, fontWeight:"600", color:'#16C3CF'}]}>
+                                    Terms and Conditions
+                                </Text>
+                            </TouchableOpacity>
+                            <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:15, fontSize:14, fontWeight:"600", color:'rgba(0, 0, 0, 0.6)'}]}>
+                                and
+                            </Text>
+                        </View>
+                        <View style={[styles.flexRow, styles.alignCenterm, {marginTop:5}]}>
+                            <TouchableOpacity>
+                                <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:15, fontSize:14, fontWeight:"600", color:'#16C3CF'}]}>
+                                    Privacy Policy
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+                <View style={[{marginTop:30}]}>
+                    <TouchableOpacity>
+                        <View style={[{backgroundColor:'#16A9CF', height:55, borderRadius:15, justifyContent:'center'}]}>
+                            <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:22, fontSize:18, fontWeight:"700", color:'#FFFFFF', textAlign:'center'}]}>I’m able</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+                <View style={[{marginBottom:150, marginTop:30}, styles.justifyCenter, styles.alignFlexEnd, styles.flexRow]}>
+                    <View>
+                        <Text style={[{fontStyle:'normal', textfontFamily:'Quicksand-Bold', lineHeight:15, fontSize:14, fontWeight:"500", color:'rgba(0, 0, 0, 0.6)'}]}>
+                            Have an account?
+                        </Text>
+                    </View>
+                    <View>
+                        <TouchableOpacity>
+                            <Text style={[{marginHorizontal: 5,fontStyle:'normal', textfontFamily:'Quicksand-Bold', fontSize:20, fontWeight:"700", color:'#343434'}]}>
+                                Log in.
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         )
@@ -329,7 +371,7 @@ const Register = () => {
             <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
             <ImageBackground style = {[{height:windowHeight}]} source={require('../resource/jpg/banig2.jpg')} resizeMode="cover"> 
                 {HeaderComponent()}
-                <View style={[{backgroundColor:'#F8F8F8', height:windowHeight, borderTopStartRadius:30, borderTopEndRadius:30, marginTop:20}]}>
+                <View style={[{backgroundColor:'#F8F8F8', height:windowHeight, borderTopStartRadius:30, borderTopEndRadius:30, marginTop:55, paddingTop:30}]}>
                     <FlatList
                         ListFooterComponent={FooterComponentAsBody()}
                     />

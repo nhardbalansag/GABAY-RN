@@ -12,12 +12,14 @@ import {
 } from 'react-native';
 
 import Login from './src/screen/Login'
+import Gabay from './src/screen/Gabay'
 import Register from './src/screen/Register'
+import ForgotPassword from './src/screen/ForgotPassword';
 
 const App = () => {
   return (
     <View> 
-      <Register/>
+      <ForgotPassword/>
     </View>
   );
 };
