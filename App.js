@@ -16,11 +16,12 @@ import Gabay from './src/screen/Gabay'
 import Register from './src/screen/Register'
 import ForgotPassword from './src/screen/ForgotPassword';
 import Welcome from './src/screen/Welcome';
+import SetUpPasscode from './src/screen/SetUpPasscode'
 
 const App = () => {
   return (
     <View> 
-      <Welcome/>
+      <SetUpPasscode/>
     </View>
   );
 };
