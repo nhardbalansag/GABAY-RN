@@ -17,11 +17,12 @@ import Register from './src/screen/Register'
 import ForgotPassword from './src/screen/ForgotPassword';
 import Welcome from './src/screen/Welcome';
 import SetUpPasscode from './src/screen/SetUpPasscode'
+import Terms from './src/screen/Terms'
 
 const App = () => {
   return (
     <View> 
-      <SetUpPasscode/>
+      <Terms/>
     </View>
   );
 };
