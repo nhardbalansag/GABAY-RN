@@ -38,7 +38,7 @@ const SetUpPasscode = () => {
     return (
         <View>
             <StatusBar barStyle={"dark-content"} backgroundColor={"#FFFFFF"}/>
-            <View style={[ {backgroundColor:'#FFFFFF', paddingHorizontal:17, height:'100%'}]}>
+            <View style={[ {backgroundColor:'#FFFFFF', paddingHorizontal:17, height:'100%'}, styles.alignCenter, styles.justifySpaceAround]}>
                 <View style={[ styles.alignFlexStart, {marginTop:68}]}>
                     <View style={[{marginBottom:10}]}>
                         <SetupPassCode />
@@ -48,35 +48,93 @@ const SetUpPasscode = () => {
                     </View>
                 </View>
                 <View style={[{marginTop:50, marginHorizontal:16}]}>
-                    <View style={[styles.justifyCenter, styles.alignCenter]}>
-                        <View style={[styles.justifyCenter, styles.alignCenter, styles.flexRow]}>
-                            <RadioButton
-                                disabled={true}
-                                value="second"
-                                status={ 'checked'}
-                                // onPress={() => setChecked('second')}
-                            />
-                            <RadioButton
-                                disabled={true}
-                                value="second"
-                                status={ 'unchecked'}
-                                // onPress={() => setChecked('second')}
-                            />
-                            <RadioButton
-                                disabled={true}
-                                value="second"
-                                status={ 'unchecked'}
-                                // onPress={() => setChecked('second')}
-                            />
-                            <RadioButton
-                                disabled={true}
-                                value="second"
-                                status={ 'unchecked'}
-                                // onPress={() => setChecked('second')}
-                            />
+                    <View style={[styles.justifyCenter, styles.alignCenter, styles.flexRow]}>
+                        <RadioButton
+                            disabled={true}
+                            value="second"
+                            status={ 'checked'}
+                            // onPress={() => setChecked('second')}
+                        />
+                        <RadioButton
+                            disabled={true}
+                            value="second"
+                            status={ 'unchecked'}
+                            // onPress={() => setChecked('second')}
+                        />
+                        <RadioButton
+                            disabled={true}
+                            value="second"
+                            status={ 'unchecked'}
+                            // onPress={() => setChecked('second')}
+                        />
+                        <RadioButton
+                            disabled={true}
+                            value="second"
+                            status={ 'unchecked'}
+                            // onPress={() => setChecked('second')}
+                        />
+                    </View>
+                    <View style={[styles.alignCenter, styles.justifyCenter, {marginTop: 50}]}>
+                        <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, {marginVertical:15}]}>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>1</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>2</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>3</Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, {marginVertical:15}]}>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>4</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>5</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>6</Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, {marginVertical:15}]}>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>7</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>8</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>9</Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={[styles.flexRow, styles.alignCenter, styles.justifyCenter, {marginVertical:15}]}>
+                            <TouchableOpacity style={[{width:'30%'}, styles.alignCenter]}>
+                                <View>
+                                    <Text style={[{fontWeight:'700', fontSize:25, color:'#000000'}]}>0</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                     </View>
-                    <View style={[styles.justifyCenter, styles.alignCenter, {marginTop:'100%'}]}>
+                    <View style={[styles.justifyCenter, styles.alignCenter]}>
                         <View style={[styles.justifyCenter, styles.alignCenter]}>
                             <View>
                                 <TouchableOpacity>
