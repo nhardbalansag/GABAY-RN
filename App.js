@@ -19,11 +19,13 @@ import Welcome from './src/screen/Welcome';
 import SetUpPasscode from './src/screen/SetUpPasscode'
 import Terms from './src/screen/Terms'
 import OnboardingQuestion from './src/screen/OnboardingQuestion'
+import CheckConfirmJoin from './src/screen/CheckConfirmJoin'
+
 
 const App = () => {
   return (
     <View> 
-      <OnboardingQuestion/>
+      <CheckConfirmJoin/>
     </View>
   );
 };
