@@ -20,12 +20,14 @@ import SetUpPasscode from './src/screen/SetUpPasscode'
 import Terms from './src/screen/Terms'
 import OnboardingQuestion from './src/screen/OnboardingQuestion'
 import CheckConfirmJoin from './src/screen/CheckConfirmJoin'
+import EnterVerificationCode from './src/screen/EnterVerificationCode'
+
 
 
 const App = () => {
   return (
     <View> 
-      <CheckConfirmJoin/>
+      <EnterVerificationCode/>
     </View>
   );
 };
