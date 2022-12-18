@@ -18,11 +18,12 @@ import ForgotPassword from './src/screen/ForgotPassword';
 import Welcome from './src/screen/Welcome';
 import SetUpPasscode from './src/screen/SetUpPasscode'
 import Terms from './src/screen/Terms'
+import OnboardingQuestion from './src/screen/OnboardingQuestion'
 
 const App = () => {
   return (
     <View> 
-      <Terms/>
+      <OnboardingQuestion/>
     </View>
   );
 };
