@@ -21,13 +21,14 @@ import Terms from './src/screen/Terms'
 import OnboardingQuestion from './src/screen/OnboardingQuestion'
 import CheckConfirmJoin from './src/screen/CheckConfirmJoin'
 import EnterVerificationCode from './src/screen/EnterVerificationCode'
+import AccountVerified from './src/screen/AccountVerified'
 
 
 
 const App = () => {
   return (
     <View> 
-      <EnterVerificationCode/>
+      <AccountVerified/>
     </View>
   );
 };
